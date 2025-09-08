@@ -1,0 +1,1 @@
+# pkg-automation-shared-test
