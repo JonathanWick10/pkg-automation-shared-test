@@ -30,8 +30,12 @@ export const PublicPiecePackage = Type.Object({
 
 export type PublicPiecePackage = Static<typeof PublicPiecePackage>
 
-export const PiecePackage = Type.Union([PrivatePiecePackage, PublicPiecePackage])
-export type PiecePackage = PrivatePiecePackage | PublicPiecePackage
+export const PiecePackageSchema = Type.Union([
+    PrivatePiecePackage,
+    PublicPiecePackage,
+])
+
+export type PiecePackage = Static<typeof PiecePackageSchema>
 
 export enum PieceCategory {
     ARTIFICIAL_INTELLIGENCE = 'ARTIFICIAL_INTELLIGENCE',

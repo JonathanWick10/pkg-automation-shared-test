@@ -112,7 +112,7 @@ export type CustomAuthConnection = AppConnection<AppConnectionType.CUSTOM_AUTH>
 export type NoAuthConnection = AppConnection<AppConnectionType.NO_AUTH>
 
 export const AppConnectionWithoutSensitiveData = Type.Object({
-    ...BaseModelSchema,
+    ...BaseModelSchema.properties,
     externalId: Type.String(),
     displayName: Type.String(),
     type: Type.Enum(AppConnectionType),

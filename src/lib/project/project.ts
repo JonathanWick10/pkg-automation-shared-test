@@ -42,7 +42,7 @@ export type ProjectUsage = Static<typeof ProjectUsage>
 export type ProjectPlanId = string
 
 export const ProjectPlan = Type.Object({
-    ...BaseModelSchema,
+    ...BaseModelSchema.properties,
     projectId: Type.String(),
     locked: Type.Boolean({ default: false }),
     name: Type.String(),
@@ -55,7 +55,7 @@ export const ProjectPlan = Type.Object({
 export type ProjectPlan = Static<typeof ProjectPlan>
 
 export const Project = Type.Object({
-    ...BaseModelSchema,
+    ...BaseModelSchema.properties,
     deleted: Nullable(Type.String()),
     ownerId: Type.String(),
     displayName: Type.String(),

@@ -3,7 +3,7 @@ import { BaseModelSchema } from '../common'
 import { Cell } from './cell'
 
 export const Record = Type.Object({
-    ...BaseModelSchema,
+    ...BaseModelSchema.properties,
     tableId: Type.String(),
     projectId: Type.String(),
 })

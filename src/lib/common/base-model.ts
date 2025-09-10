@@ -6,11 +6,11 @@ export type BaseModel<T> = {
     updated: string
 }
 
-export const BaseModelSchema = {
+export const BaseModelSchema = Type.Object({
     id: Type.String(),
     created: Type.String(),
     updated: Type.String(),
-}
+})
 
 // Used to generate valid nullable in OpenAPI Schema
 export const Nullable = <T extends TSchema>(schema: T) => Type.Optional(Type.Unsafe<Static<T> | null>({

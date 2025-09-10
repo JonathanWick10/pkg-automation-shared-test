@@ -13,7 +13,7 @@ export enum FlowStatus {
 
 
 export const Flow = Type.Object({
-    ...BaseModelSchema,
+    ...BaseModelSchema.properties,
     projectId: Type.String(),
     externalId: Type.String(),
     folderId: Nullable(Type.String()),

@@ -33,7 +33,7 @@ export const ScheduleOptions = Type.Object({
 export type ScheduleOptions = Static<typeof ScheduleOptions>
 
 export const TriggerSource = Type.Object({
-    ...BaseModelSchema,
+    ...BaseModelSchema.properties,
     type: Type.Enum(TriggerStrategy),
     projectId: Type.String(),
     flowId: Type.String(),

@@ -4,7 +4,7 @@ import { UserWithMetaInformation } from '../user'
 import { ProjectReleaseType } from './project-release.request'
 
 export const ProjectRelease = Type.Object({
-    ...BaseModelSchema,
+    ...BaseModelSchema.properties,
     projectId: Type.String(),
     name: Type.String(),
     description: Nullable(Type.String()),

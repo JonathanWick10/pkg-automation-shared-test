@@ -25,7 +25,7 @@ export const MachineInformation = Type.Object({
 export type MachineInformation = Static<typeof MachineInformation>
 
 export const WorkerMachine = Type.Object({
-    ...BaseModelSchema,
+    ...BaseModelSchema.properties,
     information: MachineInformation,
 })
 

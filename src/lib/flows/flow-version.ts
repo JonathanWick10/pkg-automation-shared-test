@@ -14,7 +14,7 @@ export enum FlowVersionState {
 }
 
 export const FlowVersion = Type.Object({
-    ...BaseModelSchema,
+    ...BaseModelSchema.properties,
     flowId: Type.String(),
     displayName: Type.String(),
     trigger: FlowTrigger,
@@ -29,7 +29,7 @@ export const FlowVersion = Type.Object({
 export type FlowVersion = Static<typeof FlowVersion>
 
 export const FlowVersionMetadata = Type.Object({
-    ...BaseModelSchema,
+    ...BaseModelSchema.properties,
     flowId: Type.String(),
     displayName: Type.String(),
     valid: Type.Boolean(),

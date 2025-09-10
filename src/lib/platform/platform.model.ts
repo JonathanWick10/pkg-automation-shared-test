@@ -85,7 +85,7 @@ export enum AiOverageState {
 }
 
 export const PlatformPlan = Type.Object({
-    ...BaseModelSchema,
+    ...BaseModelSchema.properties,
     plan: Type.Optional(Type.String()),
     platformId: Type.String(),
     tasksLimit: Type.Optional(Type.Number()),
@@ -138,7 +138,7 @@ export type PlatformPlanLimits = Static<typeof PlatformPlanLimits>
 export type PlatformPlanWithOnlyLimits = Omit<PlatformPlanLimits, 'stripeSubscriptionStartDate' | 'stripeSubscriptionEndDate' | 'stripeBillingCycle'>
 
 export const Platform = Type.Object({
-    ...BaseModelSchema,
+    ...BaseModelSchema.properties,
     ownerId: ApId,
     name: Type.String(),
     primaryColor: Type.String(),

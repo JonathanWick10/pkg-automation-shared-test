@@ -36,7 +36,7 @@ export enum AgentTaskStatus {
 }
 
 export const AgentRun = Type.Object({
-    ...BaseModelSchema,
+    ...BaseModelSchema.properties,
     agentId: Type.String(),
     projectId: Type.String(),
     status: Type.Enum(AgentTaskStatus),
@@ -55,7 +55,7 @@ export const AgentRun = Type.Object({
 export type AgentRun = Static<typeof AgentRun>
 
 export const Agent = Type.Object({
-    ...BaseModelSchema,
+    ...BaseModelSchema.properties,
     displayName: Type.String(),
     description: Type.String(),
     systemPrompt: Type.String(),

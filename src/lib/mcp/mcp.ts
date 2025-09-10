@@ -6,7 +6,7 @@ import { McpTool, McpToolType } from './tools/mcp-tool'
 export type McpId = ApId
 
 export const Mcp = Type.Object({
-    ...BaseModelSchema,
+    ...BaseModelSchema.properties,
     name: Type.String(),
     projectId: ApId,
     token: ApId,

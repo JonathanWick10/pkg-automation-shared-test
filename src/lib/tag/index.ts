@@ -2,7 +2,7 @@ import { Static, Type } from '@sinclair/typebox'
 import { BaseModelSchema } from '../common/base-model'
 
 export const Tag = Type.Object({
-    ...BaseModelSchema,
+    ...BaseModelSchema.properties,
     platformId: Type.String(),
     name: Type.String(),
 })
@@ -10,7 +10,7 @@ export const Tag = Type.Object({
 export type Tag = Static<typeof Tag>
 
 export const PieceTag = Type.Object({
-    ...BaseModelSchema,
+    ...BaseModelSchema.properties,
     pieceName: Type.String(),
     tagId: Type.String(),
     platformId: Type.String(),

@@ -24,7 +24,7 @@ export const McpFlowRunMetadata = Type.Object({
 export type McpFlowRunMetadata = Static<typeof McpFlowRunMetadata>
 
 export const McpRun = Type.Object({
-    ...BaseModelSchema,
+    ...BaseModelSchema.properties,
     mcpId: ApId,
     projectId: ApId,
     toolId: ApId,

@@ -10,7 +10,7 @@ export enum TriggerRunStatus {
 }
 
 export const TriggerRun = Type.Object({
-    ...BaseModelSchema,
+    ...BaseModelSchema.properties,
     jobId: Type.String(),
     platformId: Type.String(),
     payloadFileId: Type.String(),

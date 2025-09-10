@@ -8,7 +8,7 @@ export enum TableWebhookEventType {
 }
 
 export const TableWebhook = Type.Object({
-    ...BaseModelSchema,
+    ...BaseModelSchema.properties,
     projectId: Type.String(),
     tableId: Type.String(),
     events: Type.Array(Type.Enum(TableWebhookEventType)),

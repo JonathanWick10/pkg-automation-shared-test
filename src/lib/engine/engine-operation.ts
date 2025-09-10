@@ -141,10 +141,10 @@ export type ExecuteTriggerOperation<HT extends TriggerHookType> = BaseEngineOper
     webhookSecret?: string | Record<string, string>
 }
 
-
+const RawBodySchema = Type.Unknown()
 export const TriggerPayload = Type.Object({
     body: Type.Unknown(),
-    rawBody: Type.Optional(Type.Unknown()),
+    rawBody: Type.Optional(RawBodySchema),
     headers: Type.Record(Type.String(), Type.String()),
     queryParams: Type.Record(Type.String(), Type.String()),
 })

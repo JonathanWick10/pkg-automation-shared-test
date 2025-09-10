@@ -25,7 +25,7 @@ export const AnalyticsProjectReport = Type.Array(AnalyticsProjectReportItem)
 export type AnalyticsProjectReport = Static<typeof AnalyticsProjectReport>
 
 export const PlatformAnalyticsReport = Type.Object({
-    ...BaseModelSchema,
+    ...BaseModelSchema.properties,
     totalFlows: Type.Number(),
     activeFlows: Type.Number(),
     totalUsers: Type.Number(),

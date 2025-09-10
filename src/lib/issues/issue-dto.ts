@@ -14,7 +14,7 @@ const Step = Type.Object({
 })
 
 export const Issue = Type.Object({
-    ...BaseModelSchema,
+    ...BaseModelSchema.properties,
     projectId: ApId,
     flowId: ApId,
     flowVersionId: ApId,

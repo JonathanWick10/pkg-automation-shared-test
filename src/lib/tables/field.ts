@@ -9,7 +9,7 @@ export enum FieldType {
 }
 
 export const Field = Type.Union([Type.Object({
-    ...BaseModelSchema,
+    ...BaseModelSchema.properties,
     name: Type.String(),
     externalId: Type.String(),
     type: Type.Literal(FieldType.STATIC_DROPDOWN),
@@ -21,7 +21,7 @@ export const Field = Type.Union([Type.Object({
         })),
     }),
 }), Type.Object({
-    ...BaseModelSchema,
+    ...BaseModelSchema.properties,
     name: Type.String(),
     externalId: Type.String(),
     type: Type.Union([Type.Literal(FieldType.TEXT), Type.Literal(FieldType.NUMBER), Type.Literal(FieldType.DATE)]),

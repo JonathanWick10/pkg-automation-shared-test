@@ -9,7 +9,7 @@ export enum UserIdentityProvider {
     JWT = 'JWT',
 }
 export const UserIdentity = Type.Object({
-    ...BaseModelSchema,
+    ...BaseModelSchema.properties,
     firstName: Type.String(),
     lastName: Type.String(),
     email: Type.String(),

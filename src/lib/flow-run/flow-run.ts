@@ -24,7 +24,7 @@ export type FlowRetryPayload = {
 }
 
 export const FlowRun = Type.Object({
-    ...BaseModelSchema,
+    ...BaseModelSchema.properties,
     projectId: Type.String(),
     flowId: Type.String(),
     parentRunId: Type.Optional(Type.String()),

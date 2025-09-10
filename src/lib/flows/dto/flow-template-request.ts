@@ -17,7 +17,7 @@ export enum TemplateType {
 }
 
 export const FlowTemplate = Type.Object({
-    ...BaseModelSchema,
+    ...BaseModelSchema.properties,
     name: Type.String(),
     description: Type.String(),
     type: Type.Enum(TemplateType),

@@ -14,7 +14,7 @@ export enum InvitationStatus {
 }
 
 export const UserInvitation = Type.Object({
-    ...BaseModelSchema,
+    ...BaseModelSchema.properties,
     email: Type.String(),
     status: Type.Enum(InvitationStatus),
     type: Type.Enum(InvitationType),

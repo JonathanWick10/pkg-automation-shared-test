@@ -26,7 +26,7 @@ export enum FileLocation {
 }
 
 export const File = Type.Object({
-    ...BaseModelSchema,
+    ...BaseModelSchema.properties,
     projectId: Type.Optional(Type.String()),
     platformId: Type.Optional(Type.String()),
     type: Type.Enum(FileType),

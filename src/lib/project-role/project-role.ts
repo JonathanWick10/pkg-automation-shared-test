@@ -2,7 +2,7 @@ import { Static, Type } from '@sinclair/typebox'
 import { BaseModelSchema } from '../common'
 
 export const ProjectRole = Type.Object({
-    ...BaseModelSchema,
+    ...BaseModelSchema.properties,
     name: Type.String(),
     permissions: Type.Array(Type.String()),
     platformId: Type.Optional(Type.String()),

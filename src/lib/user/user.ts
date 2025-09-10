@@ -39,7 +39,7 @@ export const PasswordType = Type.String({
 })
 
 export const User = Type.Object({
-    ...BaseModelSchema,
+    ...BaseModelSchema.properties,
     platformRole: Type.Enum(PlatformRole),
     status: Type.Enum(UserStatus),
     identityId: Type.String(),

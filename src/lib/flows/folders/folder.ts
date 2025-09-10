@@ -4,7 +4,7 @@ import { BaseModelSchema } from '../../common'
 export type FolderId = string
 
 export const Folder = Type.Object({
-    ...BaseModelSchema,
+    ...BaseModelSchema.properties,
     id: Type.String(),
     projectId: Type.String(),
     displayName: Type.String(),

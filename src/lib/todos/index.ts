@@ -74,7 +74,7 @@ export enum TodoEnvironment {
 }
 
 export const Todo = Type.Object({
-    ...BaseModelSchema,
+    ...BaseModelSchema.properties,
     title: Type.String(),
     description: Type.String(),
     status: StatusOption,
@@ -106,7 +106,7 @@ export enum TodoType {
 }
 
 export const TodoActivity = Type.Object({
-    ...BaseModelSchema,
+    ...BaseModelSchema.properties,
     todoId: Type.String(),
     userId: Nullable(Type.String()),
     content: Type.String(),

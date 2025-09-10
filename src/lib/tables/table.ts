@@ -13,7 +13,7 @@ export enum TableAutomationStatus {
 }
 
 export const Table = Type.Object({
-    ...BaseModelSchema,
+    ...BaseModelSchema.properties,
     name: Type.String(),
     projectId: Type.String(),
     externalId: Type.String(),
